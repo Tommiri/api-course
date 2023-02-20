@@ -3,5 +3,10 @@
 -- File: 031-order-by-1.sql
 
 -- Start of answer
-
+SELECT  ename
+        , sal
+        , sal * 1.15 as "new salary"
+FROM    emp
+ORDER BY "new salary" ASC, ename
+        ;
 -- End of file
