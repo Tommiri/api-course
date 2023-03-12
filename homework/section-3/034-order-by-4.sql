@@ -3,12 +3,14 @@
 -- File: 034-order-by-4.sql
 
 -- Start of answer
-SELECT  ename as "Employee"
-        , sal as "Monthly Salary"
-        , sal * 1.10 as "Sal 10%"
-        , comm as "Comm"
+SELECT  ename AS "Employee"
+        , sal AS "Monthly Salary"
+        , sal * 1.10 AS "Sal 10%"
+        , comm AS "Comm"
 FROM    emp
-WHERE   comm > "Sal 10%"
-ORDER BY ename, sal ASC, comm ASC
-        ;
+WHERE   comm > sal * 1.10
+ORDER BY ename  ASC
+        , sal   ASC
+        , comm  ASC
+;
 -- End of file

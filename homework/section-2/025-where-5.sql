@@ -9,6 +9,5 @@ FROM    emp
 WHERE   deptno = 10
         OR
         deptno = 30
-ORDER BY deptno ASC
         ;
 -- End of file

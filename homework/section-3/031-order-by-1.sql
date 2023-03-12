@@ -5,8 +5,10 @@
 -- Start of answer
 SELECT  ename
         , sal
-        , sal * 1.15 as "new salary"
+        , sal * 1.15 AS "new salary"
 FROM    emp
-ORDER BY "new salary" ASC, ename
-        ;
+WHERE   mgr = 7698 
+ORDER BY "new salary" ASC
+        , ename ASC
+;
 -- End of file

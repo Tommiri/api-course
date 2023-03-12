@@ -3,10 +3,12 @@
 -- File: 033-order-by-3.sql
 
 -- Start of answer
-SELECT  deptno  as "Dept"
-        , ename as "Employee"
-        , sal * 12 * 0.31 as "Taxes"
+SELECT  deptno  AS "Dept"
+        , ename AS "Employee"
+        , sal * 12 * 0.31 AS "Taxes"
 FROM    emp
-ORDER BY deptno ASC, ename
-        ;
+WHERE   deptno = 10
+ORDER BY deptno ASC
+        , ename ASC
+;
 -- End of file
