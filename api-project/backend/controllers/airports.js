@@ -6,7 +6,13 @@ export const getAirports = async (req, res) => {
     const airports = await Airport.findAll({
       where: req.query, // Allows searching with query params
     });
-    res.status(200).send(airports);
+
+    // If airports.length > 0, there are entries
+    if (airports.length) {
+      res.status(200).send(airports);
+    } else {
+      res.status(404).send('No airports found!');
+    }
   } catch (err) {
     res.status(500).send(err.message); // Server error
   }
